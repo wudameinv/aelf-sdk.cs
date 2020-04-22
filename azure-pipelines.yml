@@ -10,8 +10,7 @@ jobs:
     displayName: 'Install .NET Core SDK'
     inputs:
       version: 3.1.101
-  - powershell: ./scripts/aelf-node/start-window.ps1 
-  - script: PowerShell.exe -file build.ps1 -target=test
+  - powershell: ./scripts/aelf-node/start-window.ps1
     displayName: 'Build and Test'
 # All tasks on Linux
 - job: build_all_linux
