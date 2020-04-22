@@ -6,8 +6,9 @@ jobs:
   variables:
     phpVersion: 7.2
   steps:
-  - script: |
-      echo "test"
+  - powershell: ./scripts/aelf-node/start-window.ps1 
+  - script: PowerShell.exe -file build.ps1 -target=test
+    displayName: 'Build and Test'
 # All tasks on Linux
 - job: build_all_linux
   displayName: Build all tasks (Linux)
